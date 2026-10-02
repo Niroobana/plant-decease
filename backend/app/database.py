@@ -12,26 +12,18 @@ class Settings(BaseSettings):
         extra="ignore"
     )
 
-    model_config = SettingsConfigDict(
-        env_file=".env",
-        extra="ignore"
-    )
-
 
 settings = Settings()
-
 
 engine = create_engine(
     settings.database_url
 )
-
 
 SessionLocal = sessionmaker(
     autocommit=False,
     autoflush=False,
     bind=engine
 )
-
 
 Base = declarative_base()
 
