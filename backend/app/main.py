@@ -12,8 +12,6 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="Plant Disease Analyzer API"
 )
-
-
 app.add_middleware(
     CORSMiddleware,
       allow_origins=[

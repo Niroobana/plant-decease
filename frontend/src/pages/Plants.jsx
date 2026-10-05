@@ -82,55 +82,59 @@ function Plants() {
       <form onSubmit={handleSubmit}>
 
         <div>
-          <label>Plant Name</label>
-          <br />
+        <label htmlFor="plantName">Plant Name</label>
 
-          <input
-            type="text"
-            value={plantName}
-            onChange={(event) => setPlantName(event.target.value)}
-            required
-          />
+<input
+  id="plantName"
+  name="plantName"
+  type="text"
+  value={plantName}
+  onChange={(event) => setPlantName(event.target.value)}
+  required
+/>
         </div>
 
         <br />
 
         <div>
-          <label>Plant Type</label>
-          <br />
+<label htmlFor="plantType">Plant Type</label>
 
-          <input
-            type="text"
-            value={plantType}
-            onChange={(event) => setPlantType(event.target.value)}
-            required
-          />
+<input
+  id="plantType"
+  name="plantType"
+  type="text"
+  value={plantType}
+  onChange={(event) => setPlantType(event.target.value)}
+  required
+/>
         </div>
 
         <br />
 
         <div>
-          <label>Location</label>
-          <br />
+        <label htmlFor="location">Location</label>
 
-          <input
-            type="text"
-            value={location}
-            onChange={(event) => setLocation(event.target.value)}
-          />
+<input
+  id="location"
+  name="location"
+  type="text"
+  value={location}
+  onChange={(event) => setLocation(event.target.value)}
+/>
         </div>
 
         <br />
 
         <div>
-          <label>Owner</label>
-          <br />
+       <label htmlFor="owner">Owner</label>
 
-          <select
-            value={userId}
-            onChange={(event) => setUserId(event.target.value)}
-            required
-          >
+<select
+  id="owner"
+  name="owner"
+  value={userId}
+  onChange={(event) => setUserId(event.target.value)}
+  required
+>
             <option value="">Select Owner</option>
 
             {users.map((user) => (
